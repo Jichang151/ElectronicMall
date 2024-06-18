@@ -1,0 +1,212 @@
+/* 主样式文件 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* 背景色设置为淡蓝色 */
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+}
+
+header {
+  background-color: #90ee90; /* 导航栏背景色设置为淡绿色 */
+  color: #333; /* 导航栏文字颜色设置为深灰色 */
+  padding: 10px 20px;
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #333; /* 导航链接文字颜色设置为深灰色 */
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s; /* 添加颜色过渡效果 */
+}
+
+nav a:hover {
+  color: #666; /* 悬停时改变颜色为浅灰色 */
+}
+
+main {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+footer {
+  background-color: #90ee90; /* 页脚背景色设置为淡绿色 */
+  color: #333; /* 页脚文字颜色设置为深灰色 */
+  padding: 10px 20px;
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+}
+
+
+main {
+  width: 1000px;
+  padding: 20px;
+  flex-grow: 1; /* 主内容区域占据剩余空间 */
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* 优化产品列表样式 */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* 从左到右排列 */
+}
+
+.product-item {
+  width: calc(22% - 20px);
+  margin: 10px;
+  padding: 20px 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.product-item img {
+  width: 100%; /* 图片宽度占满容器 */
+  border-radius: 5px; /* 图片圆角 */
+  margin-bottom: 10px; /* 图片与文字间距 */
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-item p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.product-item a {
+  text-decoration: none;
+  background-color: #ffa500; /* 按钮背景色设置为橙色 */
+  color: #333; /* 按钮文字颜色设置为深灰色 */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+  
+}
+
+.product-item a:hover {
+  /* background-color: #555; */
+  background-color: #ffcc00; /* 悬停时改变背景色为浅橙色 */
+}
+
+/* 分页样式 */
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #ffa500; /* 按钮背景色设置为橙色 */
+  color: #333; /* 按钮文字颜色设置为深灰色 */
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+  color: #333;
+}
+
+.pagination-button:hover {
+  background-color: #ffcc00; /* 悬停时改变背景色为浅橙色 */
+}
+
+.pagination-button.active {
+  background-color: #ffcc00; /* 悬停时改变背景色为浅橙色 */
+}
+
+#add-to-cart {
+  background-color: #ffa500; /* 按钮背景色设置为橙色 */
+  color: #fff; /* 按钮文字颜色设置为白色 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* 按钮圆角 */
+  cursor: pointer;
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+  display: block; /* 将按钮设置为块级元素，使其占据整行 */
+}
+
+
+
+/* 购物车样式 */
+.cart-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.cart-item h3 {
+  margin-top: 0;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.cart-item input[type="number"] {
+  width: 50px;
+}
+.cart-item button {
+  background-color: #dc3545; /* 删除按钮背景色设置为红色 */
+  color: #fff; /* 删除按钮文字颜色设置为白色 */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px; /* 按钮圆角 */
+  cursor: pointer;
+  transition: background-color 0.3s; /* 添加背景色过渡效果 */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+.cart-item img {
+  width: 100px;
+}
+
+
+
+#total-price {
+  margin-top: 20px;
+}
+
+#clear-cart, #checkout {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#clear-cart {
+  background-color: #f44336;
+}
+#product-details img {
+  margin-left: 100px; 
+}
+
